@@ -8,7 +8,7 @@ tlink /Tdc spy.obj<br />
 <br />
 /Tdc is for generating a COM file<br />
 <br />
-# Output example: example capture of TASM assembling spy
+# Output example: capture of TASM assembling spy
 OPEN   NUL OKAY<br />
 OPEN   NUL OKAY<br />
 OPEN   NUL OKAY<br />
