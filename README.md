@@ -3,8 +3,8 @@ A TSR for snooping MSDOS I/O operations. Written in 1996-1997, still useful toda
 <br />
 Assemble and link with Turbo Assembler (TASM).<br />
 <br />
-tasm spy.asm<br />
-tlink /Tdc spy.obj<br />
+```tasm spy.asm```<br />
+```tlink /Tdc spy.obj```<br />
 <br />
 /Tdc is for generating a COM file<br />
 <br />
