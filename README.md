@@ -13,7 +13,7 @@ Spy will generate I/O operations dump file in C:\SPY.LST
 Run it once for installing. Run again for removing (if possible)
 <br />
 # Output example: capture of TASM/TLINK generating spy.com
-OPEN   NUL OKAY<br />
+```OPEN   NUL OKAY<br />
 OPEN   NUL OKAY<br />
 OPEN   NUL OKAY<br />
 OPEN   NUL OKAY<br />
@@ -52,3 +52,4 @@ OPEN   D:\UTY\DPMIMEM.DLL OKAY<br />
 CREATE spy.map OKAY<br />
 OPEN   spy.obj OKAY<br />
 CREATE spy.com OKAY<br />
+```
