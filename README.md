@@ -17,7 +17,7 @@ Run it once for installing. Run again for removing (if possible)
 OPEN   NUL OKAY
 OPEN   NUL OKAY
 OPEN   NUL OKAY
-OPEN   NUL OKA
+OPEN   NUL OKAY
 OPEN   NUL OKAY
 OPEN   NUL OKAY
 OPEN   NUL OKAY
