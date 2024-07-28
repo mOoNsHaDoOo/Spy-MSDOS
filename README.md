@@ -8,9 +8,9 @@ Assemble and link with Turbo Assembler (TASM).<br />
 <br />
 /Tdc is for generating a COM file<br />
 <br />
-Spy will generate I/O operations dump file in C:\SPY.LST
+Spy will generate I/O operations dump file in C:\SPY.LST.
 <br />
-Run it once for installing. Run again for removing (if possible)
+Run it once for installing. Run again for removing (if possible).
 <br />
 # Output example: capture of TASM/TLINK generating spy.com
 ```OPEN   NUL OKAY
